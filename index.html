@@ -5,59 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OrbitMate</title>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: black;
-            background-image: url("pictures/Arkaplan.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            display: flex;
-            align-items: center; 
-            flex-direction: column;
-            overflow: hidden; 
-        }
-
-        #logo {
-            padding-top: 170px;
-            animation: moveLogo 2s ease-in-out infinite alternate; 
-        }
-
-        #slogan {
-            margin-top: 50px;
-            font-family: 'Krona One', sans-serif;
-            text-align: center;
-            color: white;
-        }
-
-        #button {
-            margin-top: 50px;
-            transition: all 0.3s;
-        }
-
-        #robot {
-            position: absolute; 
-            left: 50px; 
-            bottom: 50px; 
-            height: 500px;
-            width: auto;
-            animation: moveRobot 2s ease-in-out infinite alternate;
-        }
-
-        #button:hover {
-            transform: scale(1.05);
-        }
-
-        @keyframes moveLogo {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-20px); } 
-        }
-
-        @keyframes moveRobot {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(20px); } 
-        }
-    </style>
-</head>
+    <link rel="stylesheet" href="assets/styles2.css">
+</head> 
 <body>
     <img src="pictures/Logo.png" id="logo">
     <h1 id="slogan">Your reliable friend in space!</h1>
