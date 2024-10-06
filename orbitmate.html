@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit Mate Interface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <link href="assets/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="loading-background"></div> 
+    <div id="loading-screen">
+        <img src="pictures/Loading.png" id="loading-logo">
+    </div>
+
+
+    <img src="pictures/RobotKafa.png" id="logo">
+
+
+    <div class="parent-flex">
+        <!-- container -->
+        <div class="container">
+            <div class="stats-frame">
+                <img class="icon" src="pictures/heart.png" alt="Heart Rate Icon">
+                <div class="text">
+                    <h2>Heart Rate</h2>
+                    <p>90 BPM</p>
+                </div>
+            </div>
+            <div class="stats-frame">
+                <img class="icon" src="pictures/sleep.png" alt="Sleep Icon">
+                <div class="text">
+                    <h2>Sleep</h2>
+                    <p>8 hours</p>
+                </div>
+            </div>
+            <div class="stats-frame">
+                <img class="icon" src="pictures/tempreture.png" alt="Temperature Icon">
+                <div class="text">
+                    <h2>Temperature</h2>
+                    <p>25°</p>
+                </div>
+            </div>
+            <div class="tasks-frame">
+                <h2>TASKS</h2>
+                <p>Fix the cables✅</p>
+                <p>Clean the robot✅</p>
+                <p>Win a XOX game✅</p>
+            </div>
+        </div>
+        <!-- modal -->
+        <div class="modal" id="tic-tac-toe-modal">
+            <div class="modal-content">
+                <span class="close-button" id="close-modal">&times;</span>
+                <h2>Tic-Tac-Toe</h2>
+                <div id="game-board"></div>
+                <div id="game-status">Current Player: X</div>
+            </div>
+        </div>
+        <!-- main -->
+        <div class="maincontainer">
+            <div class="robot-frame">
+                <div class="robot-text" id="robot-text">
+                    <h2>Hi! I'm your reliable friend in space, OrbitMate.</h2>
+                </div>
+            </div>
+        </div>
+        
+        <!-- robot -->
+        <div class="robotcontainer">
+                <img class="robot" id="robot-photo" src="pictures/HappyRobot.png">
+        </div>
+
+    </div>
+
+    <div class="button-container">
+        <button id="opt-1" class="btn">Task</button>
+        <button id="opt-2" class="btn">Task</button>
+    </div>
+    <script src="assets/script.js"></script>
+
+</body>
+</html>
