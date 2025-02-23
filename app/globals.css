@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --accent-cyan: 34, 211, 238;
+}
+
+/* Overflow kontrolü için yeni stiller */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+body {
+  @apply overflow-x-hidden min-h-screen text-slate-300;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, rgba(var(--background-start-rgb), 1), rgba(var(--background-end-rgb), 1));
+}
+
+/* Scroll bar stilleri */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(var(--background-start-rgb), 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--accent-cyan), 0.3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--accent-cyan), 0.5);
+}
+
+/* Utility sınıfları */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500;
+}
+
+.btn {
+  @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:opacity-90;
+}
+
+.btn-secondary {
+  @apply bg-slate-800 text-slate-200 hover:bg-slate-700;
+}
+
+.glass {
+  @apply bg-slate-900/80 backdrop-blur-md border-b border-slate-800;
+}
+
+.glass-card {
+  @apply bg-slate-800/50 backdrop-blur-sm border border-slate-700/50;
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animated-bg {
+  @apply fixed inset-0 z-[-2];
+  background: radial-gradient(circle at center, #000922 0%, #000 100%);
+}
+
+.cyber-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230ea5e9' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
